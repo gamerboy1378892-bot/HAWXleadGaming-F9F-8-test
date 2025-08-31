@@ -1,0 +1,13 @@
+{
+  "name": "F9F-8 Cougar",
+  "author": "HAWXleadGaming",
+  "description": "Basic custom aircraft with no textures or animations",
+  "mass": 8000,
+  "thrust": 5000,
+  "lift": 1.2,
+  "drag": 0.3,
+  "model": {
+    "dae": "f9f_gear_up.dae"
+  },
+  "config": "aircraft.xml"
+}
