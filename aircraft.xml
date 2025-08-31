@@ -1,0 +1,119 @@
+<!-- Folder Structure:
+/your-aircraft-folder/
+  ├── aircraft.xml
+  ├── <model file="f9f_gear_down.dae"/>
+  ├── f9f_gear_up.dae
+  └── textures/
+
+
+<aircraft>
+    <name>F9F-8 Cougar</name>
+    <author>HAWXleadGaming</author>
+
+    <!-- Engine Configuration -->
+    <engine>
+        <type>jet</type>
+        <thrust>27000</thrust>
+        <fuel-consumption>0.85</fuel-consumption>
+        <idle-rpm>0.2</idle-rpm>
+        <max-rpm>1.0</max-rpm>
+        <rpm-acceleration>0.03</rpm-acceleration>
+        <rpm-deceleration>0.02</rpm-deceleration>
+    </engine>
+
+    <!-- Flight Controls -->
+    <controls>
+        <control>
+            <type>elevator</type>
+            <surface>elevator</surface>
+            <input>pitch</input>
+            <ratio>1.2</ratio>
+        </control>
+        <control>
+            <type>aileron</type>
+            <surface>aileron</surface>
+            <input>roll</input>
+            <ratio>1.0</ratio>
+        </control>
+        <control>
+            <type>rudder</type>
+            <surface>rudder</surface>
+            <input>yaw</input>
+            <ratio>0.8</ratio>
+        </control>
+        <control>
+            <type>flap</type>
+            <surface>flap</surface>
+            <input>flap</input>
+            <ratio>1.0</ratio>
+        </control>
+        <control>
+            <type>tailhook</type>
+            <surface>tailhook</surface>
+            <input>tailhook</input>
+            <ratio>1.0</ratio>
+        </control>
+    </controls>
+
+    <!-- Aerodynamics -->
+    <aerodynamics>
+        <wing-area>31.6</wing-area>
+        <drag-coefficient>0.025</drag-coefficient>
+        <lift-coefficient>1.3</lift-coefficient>
+        <roll-rate>120</roll-rate>
+        <pitch-rate>100</pitch-rate>
+        <yaw-rate>60</yaw-rate>
+    </aerodynamics>
+
+    <!-- Damping -->
+    <damping>
+        <pitch>0.02</pitch>
+        <roll>0.015</roll>
+        <yaw>0.01</yaw>
+    </damping>
+
+    <!-- Mass and Balance -->
+    <mass>
+        <empty>6500</empty>
+        <max>9500</max>
+    </mass>
+    <balance>
+        <cg>
+            <x>0.0</x>
+            <y>0.0</y>
+            <z>0.0</z>
+        </cg>
+    </balance>
+
+    <!-- Camera Views -->
+    <views>
+        <view>
+            <name>Cockpit</name>
+            <position>
+                <x>0.0</x>
+                <y>1.2</y>
+                <z>2.5</z>
+            </position>
+        </view>
+        <view>
+            <name>Chase</name>
+            <position>
+                <x>0.0</x>
+                <y>3.0</y>
+                <z>-10.0</z>
+            </position>
+        </view>
+    </views>
+
+    <!-- Model Switching with G Key -->
+<switch>
+    <name>gearToggle</name>
+    <key>G</key>
+    <models>
+        <model file="f9f_gear_down.dae"/>
+        <model file="f9f_gear_up.dae"/>
+    </models>
+</switch>
+
+<!-- Default Model -->
+<model file="f9f_gear_down.dae"/>
